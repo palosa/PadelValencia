@@ -1,0 +1,36 @@
+body{
+  background-color: pink;
+}
+header{
+  width: 100%;
+  height: 100px;
+  background-color: grey;
+}
+.caja{
+  background-color: blue;
+}
+.caja2{
+  background-color: blue;
+  padding: 30px;
+}
+.imgenIndex{
+  float: left;
+  margin-left: 300px;
+}
+footer {
+ background-color: #02111d;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: 100px;
+ color:#fff;
+ clear: both;
+}
+.campo{
+  background-color: green;
+  margin-left: 2px;
+}
+.campo2{
+  
+  margin-left: 52px;
+}

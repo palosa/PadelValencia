@@ -1,0 +1,9 @@
+padel_homepage:
+    path:     /
+    defaults: { _controller: PadelBundle:Default:index }
+padel_partidas:
+    path:     /partidas
+    defaults: { _controller: PadelBundle:Default:partidas }
+padel_torneos:
+    path:     /torneos
+    defaults: { _controller: PadelBundle:Default:torneos }
