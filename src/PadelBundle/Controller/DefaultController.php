@@ -3,6 +3,8 @@
 namespace PadelBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use cervezasBundle\Entity\torneo;
+
 
 class DefaultController extends Controller
 {
@@ -14,8 +16,12 @@ class DefaultController extends Controller
     {
         return $this->render('PadelBundle:Default:partidas.html.twig');
     }
-    public function torneosAction()
+    public function jugadoresAction()
     {
-        return $this->render('PadelBundle:Default:torneos.html.twig');
+          $repository = $this->getDoctrine()->getRepository('PadelBundle:jugador');
+
+          $jugadores = $repository->findAll();
+
+        return $this->render('PadelBundle:Default:jugadoresClub.html.twig',array('tablaJugador'=>$jugadores));
     }
 }

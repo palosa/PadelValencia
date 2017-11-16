@@ -5,5 +5,5 @@ padel_partidas:
     path:     /partidas
     defaults: { _controller: PadelBundle:Default:partidas }
 padel_torneos:
-    path:     /torneos
-    defaults: { _controller: PadelBundle:Default:torneos }
+    path:     /jugadores
+    defaults: { _controller: PadelBundle:Default:jugadores }
