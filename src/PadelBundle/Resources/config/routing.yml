@@ -7,3 +7,9 @@ padel_partidas:
 padel_torneos:
     path:     /jugadores
     defaults: { _controller: PadelBundle:Default:jugadores }
+padel_nombre:
+    path:     /nombre/{nombre}
+    defaults: { _controller: PadelBundle:Default:nombre }
+padel_nombreId:
+    path:     /nombreId/{id}
+    defaults: { _controller: PadelBundle:Default:nombreId }
