@@ -36,9 +36,9 @@ class nivel
     private $min;
 
     /**
-     * @var string
+     * @var float
      *
-     * @ORM\Column(name="max", type="string", length=255)
+     * @ORM\Column(name="max", type="float")
      */
     private $max;
 
