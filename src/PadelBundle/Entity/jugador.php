@@ -248,5 +248,10 @@ class jugador
     {
         return $this->password;
     }
-}
+    /**
+     * @ORM\ManyToOne(targetEntity="nivel", inversedBy="jugadores")
+     * @ORM\JoinColumn(name="valor", referencedColumnName="id")
+     */
+    private $category;
 
+}

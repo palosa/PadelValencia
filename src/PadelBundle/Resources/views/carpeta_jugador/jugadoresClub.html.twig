@@ -17,6 +17,15 @@
      <td>{{ jugadores.sexo }}</td>
      <td>{{ jugadores.edad }}</td>
      <td>{{ jugadores.nivel }}</td>
+     <td><a href="{{path(
+      'padel_formMod',
+     { 'id': jugadores.id}
+   )}} ">Actualizar</a></td>
+   <td><a href="{{path(
+    'padel_delete',
+   { 'id': jugadores.id}
+ )}} ">Eliminar</a></td>
+   </tr>
    </tr>
    {% endfor %}
  </table>

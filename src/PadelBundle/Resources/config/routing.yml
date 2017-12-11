@@ -6,10 +6,19 @@ padel_partidas:
     defaults: { _controller: PadelBundle:Default:partidas }
 padel_torneos:
     path:     /jugadores
-    defaults: { _controller: PadelBundle:Default:jugadores }
+    defaults: { _controller: PadelBundle:Jugador:jugadores }
 padel_nombre:
     path:     /nombre/{nombre}
     defaults: { _controller: PadelBundle:Default:nombre }
 padel_nombreId:
     path:     /nombreId/{id}
     defaults: { _controller: PadelBundle:Default:nombreId }
+padel_form:
+    path:     /form
+    defaults: { _controller: PadelBundle:Jugador:crearJugador }
+padel_formMod:
+    path:     /{id}
+    defaults: { _controller: PadelBundle:Jugador:actualizarJugadores }
+padel_delete:
+    path:     /delete/{id}
+    defaults: { _controller: PadelBundle:Jugador:eliminarJugador }

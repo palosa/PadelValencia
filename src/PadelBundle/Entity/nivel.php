@@ -78,50 +78,32 @@ class nivel
     }
 
     /**
-     * Set min
+     * Set valor
      *
-     * @param float $min
+     * @param float $valor
      *
      * @return nivel
      */
-    public function setMin($min)
+    public function setValor($valor)
     {
-        $this->min = $min;
+        $this->valor = $valor;
 
         return $this;
     }
 
     /**
-     * Get min
+     * Get valor
      *
      * @return float
      */
-    public function getMin()
+    public function getValor()
     {
-        return $this->min;
+        return $this->valor;
     }
+    // ...
 
-    /**
-     * Set max
-     *
-     * @param float $max
-     *
-     * @return nivel
-     */
-    public function setMax($max)
-    {
-        $this->max = $max;
-
-        return $this;
-    }
-
-    /**
-     * Get max
-     *
-     * @return float
-     */
-    public function getMax()
-    {
-        return $this->max;
-    }
+       /**
+        * @ORM\OneToMany(targetEntity="jugador", mappedBy="nivel")
+        */
+       private $valor;
 }
