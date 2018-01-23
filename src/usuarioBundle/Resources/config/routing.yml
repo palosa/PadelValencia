@@ -1,0 +1,9 @@
+usuario_admin:
+    path:     /admin/hola
+    defaults: { _controller: usuarioBundle:Default:admi }
+usuario_insertar:
+    path:     /insertar
+    defaults: { _controller: usuarioBundle:registro:register }
+usuario_logado:
+    path:     /login
+    defaults: { _controller: usuarioBundle:security:login }

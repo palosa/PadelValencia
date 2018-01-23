@@ -1,3 +1,7 @@
+usuario:
+    resource: "@usuarioBundle/Resources/config/routing.yml"
+    prefix:   /usuario
+
 padel:
     resource: "@PadelBundle/Resources/config/routing.yml"
     prefix:   /
@@ -5,3 +9,6 @@ padel:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+logout:
+    path: /usuario/logout

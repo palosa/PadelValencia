@@ -9,7 +9,7 @@
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
           <link rel="stylesheet" href="{{ asset('css/estilos.css') }}">
         {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}"/>
     </head>
     <body>
         <header>
@@ -32,8 +32,13 @@
                   <li><a href="{{ path('padel_form') }}">Insertar jugador</a></li>
       		      </ul>
       		      <ul class="nav navbar-nav navbar-right">
-      		        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      		        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  {% if is_granted('ROLE_ADMIN') == false %}
+                  <li><a href="{{ path('usuario_insertar') }}"><span class="glyphicon glyphicon-user"></span> Registro usuario</a></li>
+                  <li><a href="{{ path('usuario_logado') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  {% endif %}
+                  {% if is_granted('ROLE_ADMIN') %}
+                  <li><a href="{{ path('logout') }}"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+                  {% endif %}
       		      </ul>
       		    </article>
       		  </section>

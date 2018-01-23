@@ -14,11 +14,11 @@ padel_nombreId:
     path:     /nombreId/{id}
     defaults: { _controller: PadelBundle:Default:nombreId }
 padel_form:
-    path:     /form
+    path:     /admin/form
     defaults: { _controller: PadelBundle:Jugador:crearJugador }
 padel_formMod:
-    path:     /{id}
+    path:     /admin/{id}
     defaults: { _controller: PadelBundle:Jugador:actualizarJugadores }
 padel_delete:
-    path:     /delete/{id}
+    path:     /admin/delete/{id}
     defaults: { _controller: PadelBundle:Jugador:eliminarJugador }
