@@ -30,6 +30,7 @@
       		        <li ><a href="{{ path('padel_partidas') }}">Partidas</a></li>
       		        <li><a href="{{ path('padel_torneos') }}">Jugadores</a></li>
                   <li><a href="{{ path('padel_form') }}">Insertar jugador</a></li>
+                  <li><a href="{{ path('usuario_listado') }}">ver Usuario</a></li>
       		      </ul>
       		      <ul class="nav navbar-nav navbar-right">
                   {% if is_granted('ROLE_ADMIN') == false %}

@@ -20,6 +20,7 @@ security:
 
     access_control:
     - { path: ^/admin , roles: ROLE_ADMIN }
+    - { path: ^/usuario/admin , roles: ROLE_ADMIN }
     - { path: ^/ roles: IS_AUTHENTICATED_ANONYMOUSLY }
 
     firewalls:
@@ -27,9 +28,9 @@ security:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        admin:
-            pattern: ^/usuario/admin
-            http_basic: ~
+        # admin:
+        #     pattern: ^/usuario/admin
+        #     http_basic: ~
         usuarios:
             pattern: ^/
             anonymous: ~

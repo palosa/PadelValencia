@@ -7,3 +7,12 @@ usuario_insertar:
 usuario_logado:
     path:     /login
     defaults: { _controller: usuarioBundle:security:login }
+usuario_listado:
+    path:     /verusuario
+    defaults: { _controller: usuarioBundle:usuarios:usuario }
+usuario_actualizar:
+    path:     /admin/actualizarusuario/{id}
+    defaults: { _controller: usuarioBundle:usuarios:actualizarUsuario }
+usuario_eliminar:
+    path:     /admin/eliminarusuario/{id}
+    defaults: { _controller: usuarioBundle:usuarios:eliminarUsuario }
