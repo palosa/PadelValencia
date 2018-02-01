@@ -41,9 +41,9 @@ class usuariosController extends Controller
   {
           $DB = $this->getDoctrine()->getManager();
 
-          $jugadores = $DB->getRepository('usuarioBundle:usuarios')->find($id);
+          $usuarios = $DB->getRepository('usuarioBundle:usuarios')->find($id);
 
-          $DB->remove($jugadores);
+          $DB->remove($usuarios);
           $DB->flush();
 
       return $this->redirectToRoute('usuario_listado');
